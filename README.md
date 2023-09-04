@@ -43,10 +43,10 @@ To clone and run this project, you need to have [Git](https://git-scm.com) insta
 
 ```bash
 # Clona el repositorio
-git clone git@github.com:Second-year/BankSimulator.git
+git clone git@github.com:Second-year/onlineStore.git
 
 # Navega al directorio del proyecto
-cd BankSimulator
+cd onlineStore
 
 # Instala las dependencias
 npm install
