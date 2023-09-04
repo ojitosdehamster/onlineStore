@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mx-auto mt-4">
+    <h1 class="text-3xl font-bold mb-4">Tienda en Línea</h1>
+
+    <!-- Lista de Productos -->
+    <div class="grid grid-cols-3 gap-4">
+        <div class="p-4 border">
+            <h2 class="text-xl font-semibold">Producto 1</h2>
+            <p>Descripción del Producto 1</p>
+            <p>Precio: $10.00</p>
+            <button class="bg-blue-500 text-white px-4 py-2 mt-2">Agregar al Carrito</button>
+        </div>
+        <!-- Aquí puedes agregar más productos de manera similar -->
+    </div>
+
+    <!-- Carrito de Compra -->
+    <div class="mt-4">
+        <h2 class="text-2xl font-semibold">Carrito de Compra</h2>
+        <ul id="carrito" class="mt-2">
+            <!-- Los elementos del carrito se agregarán aquí -->
+        </ul>
+        <button id="realizarOrden" class="bg-green-500 text-white px-4 py-2 mt-2">Realizar Orden</button>
+    </div>
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
