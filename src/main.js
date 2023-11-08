@@ -74,15 +74,20 @@ class CartItem {
 
 // Creamos una lista de productos
 const products = [
-    new Product('1', 'Producto 1', 19.99, 'https://via.placeholder.com/300'),
-    new Product('2', 'Producto 2', 19.99, 'https://via.placeholder.com/300'),
-    new Product('3', 'Producto 3', 19.99, 'https://via.placeholder.com/300'),
-    new Product('4', 'Producto 4', 19.99, 'https://via.placeholder.com/300'),
-    new Product('5', 'Producto 5', 19.99, 'https://via.placeholder.com/300'),
-    new Product('6', 'Producto 6', 19.99, 'https://via.placeholder.com/300'),
-  ];
-  
-  const cart = [];
+  new Product('1', 'Bolsas biodegradables:', 'Si tienes mascotas, ¿has pensado en las bolsas que utilizas cuando lo sacas a pasear? Pues si no las conoces, te presentamos las bolsas biodegradables', 3.49, 'bolsas.jpeg'),
+
+  new Product('2', 'Peine de bambú ecológico:', 'El interior de nuestras casas se suele ver invadido por el pelo de nuestros peques, y algo imprescindible para reducirlo es peinarlos con peines especiales. Has pensado en peines de bambú ecológico.', 16.70, 'cepillo.jpeg'),
+
+  new Product('3', 'Cama para perros y gatos estilo Tipi:', 'Es importante que nuestros más peques se sientan a gusto, seguros y cómodos dentro de nuestras casas. En Huellitas tenemos nuestros diseños únicos de camas refugio en forma de Tipi para gatos y perros pequeños. Está fabricado con tela lavable y madera recuperada 100 %.', 64.50, 'camita gato.jpeg'),
+
+  new Product('4', 'Jueguetes para morder-Perros:', 'El desarrollo de la dentadura y el desgaste de las uñas de nuestra mascota es algo fundamental en su vida. Necesitan tener juguetes para morder y arañar. Así que, en lugar de productos de plástico, ¿por qué no tener productos sostenibles y eco friendly?', 9.76, 'juguestes para morder perro.jpeg'),
+
+  new Product('5', 'Juguetes para arañar-Gatos:', 'El desarrollo de la dentadura y el desgaste de las uñas de nuestra mascota es algo fundamental en su vida. Necesitan tener juguetes para morder y arañar. Así que, en lugar de productos de plástico, ¿por qué no tener productos sostenibles y eco friendly?', 10.70, 'juguestes para arañar gato.jpeg'),
+
+  new Product('6', 'Comedero:', 'El comedero es un artículo de uso diario. ¿Has pensado en que esté hecho de materiales sostenibles? Nuestra propuesta para la familia Reviverdes se basa en un comedero hecho con madera recuperada y cuencos metálicos. Una opción sostenible y duradera en el tiempo. Además puedes personalizarlos con su nombre', 20.40, 'comidero.jpeg'),
+];
+
+const cart = [];
   
     // Agrega productos al carrito
 function addToCart(product) {
