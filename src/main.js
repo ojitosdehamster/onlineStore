@@ -122,3 +122,19 @@ function clearCart() {
   updateCartView();
 }
 
+// Procesador de la compra
+function checkout() {
+  if (cart.length === 0) {
+    return;
+  }
+
+  const orderItems = [...cart];
+  const orderTotal = cart.reduce((total, item) => total + (item.product.price * item.quantity), 0);
+  const orderDate = new Date().toLocaleString();
+
+  const order = new Order(orderItems, orderTotal, orderDate);
+  orderHistory.appendChild(order.generateOrderElement());
+
+  clearCart();
+}
+
