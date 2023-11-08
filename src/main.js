@@ -175,3 +175,11 @@ class Order {
   }
 }
 
+// Popula el grid de productos
+products.forEach(product => {
+  productGrid.appendChild(product.generateProductCard());
+});
+
+checkoutButton.addEventListener('click', checkout);
+clearButton.addEventListener('click', clearCart);
+
