@@ -101,3 +101,4 @@ function addToCart(product) {
 
   updateCartView();
 }
+
