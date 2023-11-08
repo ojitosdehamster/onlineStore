@@ -138,3 +138,16 @@ function checkout() {
   clearCart();
 }
 
+// Actualiza la vista del carrito
+function updateCartView() {
+  cartItems.innerHTML = '';
+  cartTotal.textContent = '0';
+
+  cart.forEach(cartItem => {
+    cartItems.appendChild(cartItem.generateCartItem());
+  });
+
+  const total = cart.reduce((total, item) => total + (item.product.price * item.quantity), 0);
+  cartTotal.textContent = total.toFixed(2);
+}
+
