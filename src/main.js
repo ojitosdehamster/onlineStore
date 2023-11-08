@@ -33,8 +33,9 @@ class Product {
       content.innerHTML = `
         <h2 class="text-xl font-bold mb-2">${this.name}</h2>
         <p class="mb-2 text-gray-600">Descripción del ${this.name}</p>
-        <p class="text-blue-600 font-semibold text-xl">$${this.price.toFixed(2)}</p>
-        <button class="add-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Agregar al carrito</button>
+        <p class="mb-2 text-gray-600">${this.description}</p>
+        <p class="text-emerald-700 font-semibold text-xl">$${this.price.toFixed(2)}</p>
+        <button class="add-button bg-emerald-800 hover:bg-emerald-700 text-emerald-700 font-bold py-2 px-4 rounded mt-4">Agregar al carrito</button>
       `;
     
       cardContent.appendChild(image);
