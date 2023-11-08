@@ -102,3 +102,23 @@ function addToCart(product) {
   updateCartView();
 }
 
+// Elimina productos del carrito
+function removeFromCart(product) {
+  const index = cart.findIndex(item => item.product.id === product.id);
+  if (index !== -1) {
+    if (cart[index].quantity > 1) {
+      cart[index].quantity--;
+    } else {
+      cart.splice(index, 1);
+    }
+
+    updateCartView();
+  }
+}
+
+// Funcion vaciar carrito
+function clearCart() {
+  cart.length = 0;
+  updateCartView();
+}
+
