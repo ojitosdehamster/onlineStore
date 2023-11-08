@@ -70,4 +70,34 @@ class CartItem {
     }
   }  
 
+// Creamos una lista de productos
+const products = [
+    new Product('1', 'Producto 1', 19.99, 'https://via.placeholder.com/300'),
+    new Product('2', 'Producto 2', 19.99, 'https://via.placeholder.com/300'),
+    new Product('3', 'Producto 3', 19.99, 'https://via.placeholder.com/300'),
+    new Product('4', 'Producto 4', 19.99, 'https://via.placeholder.com/300'),
+    new Product('5', 'Producto 5', 19.99, 'https://via.placeholder.com/300'),
+    new Product('6', 'Producto 6', 19.99, 'https://via.placeholder.com/300'),
+  ];
   
+  const cart = [];
+  
+    // Agrega productos al carrito
+function addToCart(product) {
+  const cartItem = cart.find(item => item.product.id === product.id);
+
+  if (cartItem) {
+    // Si el producto ya está en el carrito, muestra un mensaje al usuario
+    const addAgainProduct = window.confirm('Este producto ya está en el carrito. ¿Deseas agregarlo de nuevo?');
+
+    if (addAgainProduct) {
+      cartItem.quantity++;
+    } else {
+      cartItem.quantity 
+    }
+  } else {
+    cart.push(new CartItem(product, 1));
+  }
+
+  updateCartView();
+}
