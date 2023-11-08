@@ -151,3 +151,27 @@ function updateCartView() {
   cartTotal.textContent = total.toFixed(2);
 }
 
+// Clase "Order" para representar un pedido
+class Order {
+  constructor(items, total, date) {
+    this.items = items;
+    this.total = total;
+    this.date = date;
+  }
+
+  generateOrderElement() {
+    const orderElement = document.createElement('div');
+    orderElement.classList.add('bg-white', 'rounded', 'p-4', 'shadow')
+
+    orderElement.innerHTML = `
+      <h3>Pedido realizado el ${this.date}</p>
+      <p>
+        ${this.items.map(item => `<li>${item.quantity} x ${item.product.name}</li>`).join('')}
+      </p>
+      <p>Total: $${this.total.toFixed(2)}</p>
+    `;
+
+    return orderElement;
+  }
+}
+
